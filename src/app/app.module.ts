@@ -10,6 +10,7 @@ import { FeedbackComponent } from './components/nav-bar/feedback/feedback.compon
 import { HeaderComponentComponent } from './components/header/header-component/header-component.component';
 import { BodyComponentComponent } from './components/body/body-component/body-component.component';
 import { FooterComponentComponent } from './components/footer/footer-component/footer-component.component';
+import { SideBarComponentComponent } from './components/side-bar/side-bar-component/side-bar-component.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponentComponent } from './components/footer/footer-component/f
     FeedbackComponent,
     HeaderComponentComponent,
     BodyComponentComponent,
-    FooterComponentComponent
+    FooterComponentComponent,
+    SideBarComponentComponent
   ],
   imports: [
     BrowserModule,
