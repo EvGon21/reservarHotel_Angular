@@ -11,6 +11,7 @@ import { HeaderComponentComponent } from './components/header/header-component/h
 import { BodyComponentComponent } from './components/body/body-component/body-component.component';
 import { FooterComponentComponent } from './components/footer/footer-component/footer-component.component';
 import { SideBarComponentComponent } from './components/side-bar/side-bar-component/side-bar-component.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SideBarComponentComponent } from './components/side-bar/side-bar-compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

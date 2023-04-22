@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100%;
     grid-area: main;
     background-image: url('../assets/imgs/hotel1.jpg');
     background-size: cover;
