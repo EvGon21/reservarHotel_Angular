@@ -22,7 +22,7 @@ import { SideBarComponentComponent } from './components/side-bar/side-bar-compon
     HeaderComponentComponent,
     BodyComponentComponent,
     FooterComponentComponent,
-    SideBarComponentComponent
+    SideBarComponentComponent,
   ],
   imports: [
     BrowserModule,

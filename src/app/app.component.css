@@ -1,24 +1,36 @@
 .header{
     grid-area: header;
-    background-color: #4668ac;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     grid-area: main;
-    background-color: rgb(32, 39, 139);
+    background-image: url('../assets/imgs/hotel1.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .side-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     grid-area: side-bar;
-    background-color: rgb(17, 82, 126);
+    background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/01/09/af/1e/beach-club.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .footer{
     grid-area: footer;
-    background-color: rgb(96, 143, 204);
+    background-color: rgb(18, 18, 19);
 }
 
 .grid-container{
@@ -30,6 +42,7 @@
         "footer";
     height: 100vh;
     width: 100%;
+    background-color: #88c1e7;
 }
 
 @media(min-width: 600px){
