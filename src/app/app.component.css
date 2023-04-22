@@ -1,6 +1,6 @@
 .header{
     grid-area: header;
-    background-color: #20293d;
+    background-color: #4668ac;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@
 .grid-container{
     display: grid;
     grid-template:        
-        "header" 60px
+        "header" 85px
         "main"
         "side-bar"
         "footer";
@@ -35,7 +35,7 @@
 @media(min-width: 600px){
     .grid-container{
         grid-template: 
-        "header header" 60px
+        "header header" 65px
         "side-bar main" auto
         "footer footer" 100px /
          30%   auto;
@@ -43,7 +43,6 @@
 
     .header{
         grid-area: header;
-        background-color: #20293d;
         display: flex;
         align-items: center;
         justify-content: flex-start;

@@ -1,9 +1,20 @@
+.container-nav{
+    width: 85%;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-weight: bold;
+    float: right;
 }
 
 ul {
@@ -11,6 +22,7 @@ ul {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 li {
@@ -28,6 +40,9 @@ a:hover {
 }
 
 .logo{
+    width: 30%;
+    height: 55px;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,5 +55,12 @@ a:hover {
 }
 
 @media(min-width: 600px){
-    
+    nav {
+        color: #fff;
+        font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 }
