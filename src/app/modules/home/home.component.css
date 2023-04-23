@@ -1,0 +1,24 @@
+.title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    justify-content: center;
+}
+
+.title-container h1, h3{
+    color: white;
+}
+
+.star-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.star-container fa-icon {
+    margin-right: 1rem;
+    color: white;
+}

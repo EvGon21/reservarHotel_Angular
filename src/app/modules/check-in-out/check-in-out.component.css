@@ -1,0 +1,19 @@
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-right: 50px;
+}
+
+.btn-primary {
+    margin-left: auto;
+    display: block;
+  }
+  
