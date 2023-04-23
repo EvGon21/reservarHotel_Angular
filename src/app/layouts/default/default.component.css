@@ -15,8 +15,6 @@
 .container {
     max-width: 1200px; /* Cambiar este valor al ancho deseado */
     margin: 0 auto; /* Centra el contenedor horizontalmente */
-    border: none;
-    outline: none;
     padding: 0 15px; /* Agrega un pequeño padding a los lados del contenedor */
   }
   
