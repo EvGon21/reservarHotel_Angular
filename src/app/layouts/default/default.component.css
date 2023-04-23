@@ -1,20 +1,5 @@
 :host{
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100vh;
 }
-
-.content{
-    height: 100vh;
-    background-image: url(../../../assets/imgs/fake/fake1.jpg);
-    background-size: cover;
-    background-position: center;
-    margin: 0 auto;
-}
-
-.container {
-    max-width: 1200px; /* Cambiar este valor al ancho deseado */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    padding: 0 15px; /* Agrega un pequeño padding a los lados del contenedor */
-  }
-  

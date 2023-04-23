@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './check-in-out.component.html',
   styleUrls: ['./check-in-out.component.css']
 })
+
 export class CheckInOutComponent {
   checkInDate: string = "";
   checkOutDate: string ="";
-  numGuests: number = 0;
+  numGuests: string = "";
+
+  numAdults: string[] = ['Huesped(s)','0','1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
   constructor() { }
 
