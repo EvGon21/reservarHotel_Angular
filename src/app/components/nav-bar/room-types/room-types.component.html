@@ -1,1 +1,9 @@
-<p>room-types works!</p>
+<div class="container-fluid">
+  <h1 class="my-4 font-weight-bold" style="color: white;">Escoge tu Habitación</h1>
+  <div class="grid row">
+    <div class="grid-sizer col-lg-4"></div>
+    <div class="grid-item col-lg-4" *ngFor="let image of images">
+      <img src="{{image.url}}"/>
+    </div>
+  </div>
+</div>
