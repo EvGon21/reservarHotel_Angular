@@ -205,6 +205,8 @@ h3 {
     margin: 0 auto;
     height: 100%;
     width: 100%;
+    transform: translateX(-3.5%);
+    margin-right: 450px;
     text-align: center;
     border: 2px solid white;
     border-radius: 5px;
