@@ -1,0 +1,54 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    z-index: 999;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* estilo de encabezado transparente */
+.transparent {
+    background-color: transparent !important;
+}
+
+/* estilo de encabezado con fondo negro */
+.black {
+    background-color: #0b161b !important;
+}
+
+/* estilo de contenido */
+.content {
+    margin-top: 60px;
+    /* altura del encabezado */
+}
+
+.logo {
+    width: 30%;
+    height: 55px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 375px;
+    height: 55px;
+    cursor: pointer;
+}
