@@ -61,12 +61,37 @@ h3 {
 .title-home{
     margin-top: 80px;
     padding-right: 40px;
+
+}
+
+.container h1{
+    font-size: 5rem;
+    margin: 0;
+    margin-bottom: 0;
+    display: initial;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+}
+
+.container h2{
+    padding-left: 25px;
+    font-size: 48px;
+}
+
+.container span{
+    display: initial;
+    font-family: Montserrat;
+    font-weight: 100;
+}
+
+.container p{
+    margin-left: 25px;
+    text-align: initial;
 }
 
 .container h1,
 .container h2,
 .container p {
-    margin: 0;
     color: white;
 }
 
