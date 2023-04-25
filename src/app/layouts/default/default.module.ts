@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { SectionExperienceComponent } from 'src/app/modules/home/section-experience/section-experience.component';
 import { SectionHomeComponent } from 'src/app/modules/home/section-home/section-home.component';
 import { SectionSatisfyComponent } from 'src/app/modules/home/section-satisfy/section-satisfy.component';
+import { RoomsComponent } from 'src/app/modules/rooms/rooms.component';
+import { RoomTypesComponent } from 'src/app/modules/rooms/room-types/room-types.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { SectionSatisfyComponent } from 'src/app/modules/home/section-satisfy/se
         CheckInOutComponent,
         SectionExperienceComponent,
         SectionHomeComponent,
-        SectionSatisfyComponent
+        SectionSatisfyComponent,
+        RoomsComponent,
+        RoomTypesComponent
     ],
     imports: [
         CommonModule,

@@ -4,6 +4,7 @@ import { DefaultComponent } from './layouts/default/default.component';
 import { HomeComponent } from './modules/home/home.component';
 import { AboutComponent } from './modules/about/about.component';
 import { LoginComponent } from './modules/login/login.component';
+import { RoomsComponent } from './modules/rooms/rooms.component';
 
 const routes: Routes = [
   {path: '',
@@ -17,6 +18,9 @@ const routes: Routes = [
   },{
     path: 'login',
     component: LoginComponent
+  },{
+    path: 'rooms',
+    component: RoomsComponent
   }]
 }];
 
