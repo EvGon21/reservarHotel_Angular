@@ -10,6 +10,9 @@ import { LoginComponent } from 'src/app/modules/login/login.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CheckInOutComponent } from 'src/app/modules/check-in-out/check-in-out.component';
 import { FormsModule } from '@angular/forms';
+import { SectionExperienceComponent } from 'src/app/modules/home/section-experience/section-experience.component';
+import { SectionHomeComponent } from 'src/app/modules/home/section-home/section-home.component';
+import { SectionSatisfyComponent } from 'src/app/modules/home/section-satisfy/section-satisfy.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { FormsModule } from '@angular/forms';
         HomeComponent,
         AboutComponent,
         LoginComponent,
-        CheckInOutComponent
+        CheckInOutComponent,
+        SectionExperienceComponent,
+        SectionHomeComponent,
+        SectionSatisfyComponent
     ],
     imports: [
         CommonModule,
