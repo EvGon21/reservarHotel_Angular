@@ -7,15 +7,22 @@
 
 .form-group {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     margin-right: 50px;
+}
+
+.form-group label{
+    color: white;
+    margin-top: 0px;
 }
 
 .btn-primary {
     margin-left: auto;
     display: block;
     width: 200px;
+    margin-top: 25px;
+    height: 50px;
     border-radius: 2rem;
     background-color: #C7E7F1;
     border: 2px solid #081820;
