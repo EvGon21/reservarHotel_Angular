@@ -18,6 +18,7 @@ import { RoomTypesComponent } from 'src/app/modules/rooms/room-types/room-types.
 import { ExploreComponent } from 'src/app/modules/explore/explore.component';
 import { BookComponent } from 'src/app/modules/book/book.component';
 import { RestaurantComponent } from 'src/app/modules/restaurant/restaurant.component';
+import { ExploreHomeComponent } from 'src/app/modules/explore/explore-home/explore-home.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { RestaurantComponent } from 'src/app/modules/restaurant/restaurant.compo
         RoomTypesComponent,
         ExploreComponent,
         BookComponent,
-        RestaurantComponent
+        RestaurantComponent,
+        ExploreHomeComponent
     ],
     imports: [
         CommonModule,
