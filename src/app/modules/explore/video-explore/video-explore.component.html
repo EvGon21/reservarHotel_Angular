@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="title-container">
+      <h1>Explore</h1>
+      <h2><span>YOUR PERFECT GATEWAY</span></h2>
+    </div>
+    <div class="video-container">
+      <plyr style="display: block; width: 640px;" plyrTitle="Video 1" [plyrPlaysInline]="true" [plyrSources]="videoSources" (plyrInit)="player = $event" (plyrPlay)="played($event)"></plyr>
+    </div>
+  </div>  

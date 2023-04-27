@@ -29,10 +29,12 @@
     "install": "^0.13.0",
     "jquery": "^3.6.4",
     "masonry-layout": "^4.2.2",
+    "ngx-plyr": "^3.0.1",
     "npm": "^9.6.5",
+    "plyr": "^3.7.8",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.12.0"
+    "zone.js": "^0.12.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.2",

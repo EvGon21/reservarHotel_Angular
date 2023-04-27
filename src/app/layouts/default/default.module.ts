@@ -19,7 +19,8 @@ import { ExploreComponent } from 'src/app/modules/explore/explore.component';
 import { BookComponent } from 'src/app/modules/book/book.component';
 import { RestaurantComponent } from 'src/app/modules/restaurant/restaurant.component';
 import { ExploreHomeComponent } from 'src/app/modules/explore/explore-home/explore-home.component';
-
+import { PlyrModule } from 'ngx-plyr';
+import { VideoExploreComponent } from 'src/app/modules/explore/video-explore/video-explore.component';
 
 @NgModule({
     declarations: [
@@ -36,7 +37,8 @@ import { ExploreHomeComponent } from 'src/app/modules/explore/explore-home/explo
         ExploreComponent,
         BookComponent,
         RestaurantComponent,
-        ExploreHomeComponent
+        ExploreHomeComponent,
+        VideoExploreComponent
     ],
     imports: [
         CommonModule,
@@ -44,7 +46,8 @@ import { ExploreHomeComponent } from 'src/app/modules/explore/explore-home/explo
         FlexLayoutModule,
         SharedModule,
         FontAwesomeModule,
-        FormsModule
+        FormsModule,
+        PlyrModule
     ]
 })
 export class DefaultModule { }
