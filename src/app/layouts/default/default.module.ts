@@ -15,6 +15,9 @@ import { SectionHomeComponent } from 'src/app/modules/home/section-home/section-
 import { SectionSatisfyComponent } from 'src/app/modules/home/section-satisfy/section-satisfy.component';
 import { RoomsComponent } from 'src/app/modules/rooms/rooms.component';
 import { RoomTypesComponent } from 'src/app/modules/rooms/room-types/room-types.component';
+import { ExploreComponent } from 'src/app/modules/explore/explore.component';
+import { BookComponent } from 'src/app/modules/book/book.component';
+import { RestaurantComponent } from 'src/app/modules/restaurant/restaurant.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { RoomTypesComponent } from 'src/app/modules/rooms/room-types/room-types.
         SectionHomeComponent,
         SectionSatisfyComponent,
         RoomsComponent,
-        RoomTypesComponent
+        RoomTypesComponent,
+        ExploreComponent,
+        BookComponent,
+        RestaurantComponent
     ],
     imports: [
         CommonModule,

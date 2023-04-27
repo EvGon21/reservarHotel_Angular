@@ -5,6 +5,9 @@ import { HomeComponent } from './modules/home/home.component';
 import { AboutComponent } from './modules/about/about.component';
 import { LoginComponent } from './modules/login/login.component';
 import { RoomsComponent } from './modules/rooms/rooms.component';
+import { ExploreComponent } from './modules/explore/explore.component';
+import { RestaurantComponent } from './modules/restaurant/restaurant.component';
+import { BookComponent } from './modules/book/book.component';
 
 const routes: Routes = [
   {path: '',
@@ -21,6 +24,17 @@ const routes: Routes = [
   },{
     path: 'rooms',
     component: RoomsComponent
+  },{
+    path: 'explore',
+    component: ExploreComponent
+  }
+  ,{
+    path: 'restaurant',
+    component: RestaurantComponent
+  }
+  ,{
+    path: 'book',
+    component: BookComponent
   }]
 }];
 

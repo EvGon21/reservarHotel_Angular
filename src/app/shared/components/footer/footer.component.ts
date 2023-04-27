@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {faThumbsUp, faClockFour} from '@fortawesome/free-regular-svg-icons';
-import {faPiggyBank} from '@fortawesome/free-solid-svg-icons';
+import {faPiggyBank, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {faFacebook, faInstagram} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-footer',
@@ -11,4 +12,7 @@ export class FooterComponent {
   faThumbsUp = faThumbsUp;
   faClockFout = faClockFour;
   faPiggyBank = faPiggyBank;
+  faFacebook = faFacebook;
+  faEnvelope = faEnvelope;
+  faInstagram = faInstagram;
 }
