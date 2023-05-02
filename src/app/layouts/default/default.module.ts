@@ -21,6 +21,8 @@ import { RestaurantComponent } from 'src/app/modules/restaurant/restaurant.compo
 import { ExploreHomeComponent } from 'src/app/modules/explore/explore-home/explore-home.component';
 import { PlyrModule } from 'ngx-plyr';
 import { VideoExploreComponent } from 'src/app/modules/explore/video-explore/video-explore.component';
+import { RestaurantHomeComponent } from 'src/app/modules/restaurant/restaurant-home/restaurant-home.component';
+import { MenuSearchComponent } from 'src/app/modules/restaurant/menu-search/menu-search.component';
 
 @NgModule({
     declarations: [
@@ -38,7 +40,9 @@ import { VideoExploreComponent } from 'src/app/modules/explore/video-explore/vid
         BookComponent,
         RestaurantComponent,
         ExploreHomeComponent,
-        VideoExploreComponent
+        VideoExploreComponent,
+        RestaurantHomeComponent,
+        MenuSearchComponent
     ],
     imports: [
         CommonModule,
