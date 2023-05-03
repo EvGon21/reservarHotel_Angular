@@ -19,10 +19,10 @@ import { ExploreComponent } from 'src/app/modules/explore/explore.component';
 import { BookComponent } from 'src/app/modules/book/book.component';
 import { RestaurantComponent } from 'src/app/modules/restaurant/restaurant.component';
 import { ExploreHomeComponent } from 'src/app/modules/explore/explore-home/explore-home.component';
-import { PlyrModule } from 'ngx-plyr';
 import { VideoExploreComponent } from 'src/app/modules/explore/video-explore/video-explore.component';
 import { RestaurantHomeComponent } from 'src/app/modules/restaurant/restaurant-home/restaurant-home.component';
 import { MenuSearchComponent } from 'src/app/modules/restaurant/menu-search/menu-search.component';
+import { DomseguroPipe } from 'src/app/modules/explore/video-explore/domseguro.pipe';
 
 @NgModule({
     declarations: [
@@ -42,7 +42,8 @@ import { MenuSearchComponent } from 'src/app/modules/restaurant/menu-search/menu
         ExploreHomeComponent,
         VideoExploreComponent,
         RestaurantHomeComponent,
-        MenuSearchComponent
+        MenuSearchComponent,
+        DomseguroPipe
     ],
     imports: [
         CommonModule,
@@ -51,7 +52,6 @@ import { MenuSearchComponent } from 'src/app/modules/restaurant/menu-search/menu
         SharedModule,
         FontAwesomeModule,
         FormsModule,
-        PlyrModule
     ]
 })
 export class DefaultModule { }
