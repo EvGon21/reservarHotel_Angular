@@ -24,8 +24,17 @@
     text-align: center;
 }
 
-.bg-dark-blue p{
-    text-align: left;
+.bg-dark-blue img{
+    height: 100%;
+    width: 100%;
+    min-height: 350px;
+    min-width: 300px;
+}
+
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-icons{
