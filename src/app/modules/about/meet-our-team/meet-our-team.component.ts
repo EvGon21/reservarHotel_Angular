@@ -10,4 +10,10 @@ export class MeetOurTeamComponent {
   faInstagram = faInstagram;
   faFacebook = faFacebook;
   faTwitter = faTwitter;
+  names = [
+    {name : "Antonio Romo", charge: "Front-Dev", cardText: "Antonio is a skilled Front-End Developer with a passion for creating visually appealing and user-friendly websites."},
+    {name : "Salvador Gaytan", charge: "Back-Dev", cardText: "Luis is a skilled Back-End Developer with a passion for building robust and scalable applications."},
+    {name : "Luis Navarrete", charge: "Back-Dev", cardText: "Salvador is a skilled Back-End Developer with a passion for building efficient and reliable systems."},
+    {name : "Michelle Ruvalcaba", charge: "Front-Dev", cardText: "Michelle is a skilled Front-End Developer with a passion for creating beautiful and engaging websites."}
+  ]
 }
