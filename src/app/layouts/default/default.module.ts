@@ -23,6 +23,9 @@ import { VideoExploreComponent } from 'src/app/modules/explore/video-explore/vid
 import { RestaurantHomeComponent } from 'src/app/modules/restaurant/restaurant-home/restaurant-home.component';
 import { MenuSearchComponent } from 'src/app/modules/restaurant/menu-search/menu-search.component';
 import { DomseguroPipe } from 'src/app/modules/explore/video-explore/domseguro.pipe';
+import { MissionComponent } from 'src/app/modules/about/mission/mission.component';
+import { MeetOurTeamComponent } from 'src/app/modules/about/meet-our-team/meet-our-team.component';
+import { ContactComponent } from 'src/app/modules/about/contact/contact.component';
 
 @NgModule({
     declarations: [
@@ -43,7 +46,10 @@ import { DomseguroPipe } from 'src/app/modules/explore/video-explore/domseguro.p
         VideoExploreComponent,
         RestaurantHomeComponent,
         MenuSearchComponent,
-        DomseguroPipe
+        DomseguroPipe,
+        MissionComponent,
+        MeetOurTeamComponent,
+        ContactComponent,
     ],
     imports: [
         CommonModule,
