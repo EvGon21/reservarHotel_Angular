@@ -6,7 +6,7 @@
         <div class="col-md-3 col-sm-12" *ngFor="let person of names">
             <div class="card bg-dark-blue">
                 <div class="img-container">
-                    <img class="card-img-top col-md-6 col-sm-12" src="../../../../assets/imgs/team/user.png" alt="Card image cap">
+                    <img class="card-img-top col-md-6 col-sm-12" src="{{person.url}}" alt="Card image cap">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">{{person.name | uppercase}}</h5>

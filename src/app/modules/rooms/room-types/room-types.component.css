@@ -10,6 +10,7 @@
 }
 
 .img-container img{
+    cursor: pointer;
     max-width: 100%;
     display: block;
     margin-bottom: 0.5rem;

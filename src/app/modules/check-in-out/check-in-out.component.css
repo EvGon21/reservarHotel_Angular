@@ -12,6 +12,10 @@
     margin-right: 50px;
 }
 
+.form-group select{
+    height: 45px;
+}
+
 .form-group label{
     color: white;
     margin-top: 0px;
