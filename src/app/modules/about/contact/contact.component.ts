@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit{
   onSubmit() {
     if (this.contactForm.valid) {
       console.log(this.contactForm.value);
-      // aquí puedes enviar el formulario a través de una petición HTTP
+      // Enviar el formulario a través de una petición HTTP
     } else {
       console.log("Formulario inválido");
     }
