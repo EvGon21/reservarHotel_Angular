@@ -26,6 +26,7 @@ import { DomseguroPipe } from 'src/app/modules/explore/video-explore/domseguro.p
 import { MissionComponent } from 'src/app/modules/about/mission/mission.component';
 import { MeetOurTeamComponent } from 'src/app/modules/about/meet-our-team/meet-our-team.component';
 import { ContactComponent } from 'src/app/modules/about/contact/contact.component';
+import { FormBookComponent } from 'src/app/modules/book/form-book/form-book.component';
 
 @NgModule({
     declarations: [
@@ -50,6 +51,7 @@ import { ContactComponent } from 'src/app/modules/about/contact/contact.componen
         MissionComponent,
         MeetOurTeamComponent,
         ContactComponent,
+        FormBookComponent,
     ],
     imports: [
         CommonModule,
