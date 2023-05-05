@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-form-book',
@@ -7,6 +8,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./form-book.component.css']
 })
 export class FormBookComponent implements OnInit{
+  faInstagram = faInstagram;
+  faFacebook = faFacebook;
+  faTwitter = faTwitter;
   contactForm: FormGroup = new FormGroup({});
 
   constructor(private formBuilder: FormBuilder) { }

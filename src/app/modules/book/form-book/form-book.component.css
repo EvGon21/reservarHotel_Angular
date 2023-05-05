@@ -23,3 +23,21 @@
     align-items: center;
     justify-content: center;
 }
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    
+    font-size: 2rem;
+}
+
+.social-icons a:hover{
+    transform: scale(1.2);
+  }
+  
+.social-icons a{
+    padding: 10px ;
+    transition: transform 0.3s ease-in-out;
+}
