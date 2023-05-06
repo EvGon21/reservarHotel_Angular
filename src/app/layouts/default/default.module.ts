@@ -27,6 +27,7 @@ import { MissionComponent } from 'src/app/modules/about/mission/mission.componen
 import { MeetOurTeamComponent } from 'src/app/modules/about/meet-our-team/meet-our-team.component';
 import { ContactComponent } from 'src/app/modules/about/contact/contact.component';
 import { FormBookComponent } from 'src/app/modules/book/form-book/form-book.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -61,6 +62,7 @@ import { FormBookComponent } from 'src/app/modules/book/form-book/form-book.comp
         FontAwesomeModule,
         FormsModule,
         ReactiveFormsModule,
+        HttpClientModule
     ]
 })
 export class DefaultModule { }

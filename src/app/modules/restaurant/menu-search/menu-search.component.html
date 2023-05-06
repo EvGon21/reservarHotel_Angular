@@ -1,8 +1,55 @@
 <div class="container">
-    <div class="title-home">
-        <h1>Soup & Salads</h1>
-    </div>
-    <div class="menu-deploy">
-        <!-- Cards de Boostrap -->
-    </div>
+  <div class="title-home">
+    <h1>Favorite dishes</h1>
+  </div>
+  <div class="menu-deploy">
+    <!-- Table of Boostrap -->
+    <table class="table table-hover table-dark">
+      <thead>
+        <tr scope="col-3">SeaFood</tr>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Image</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let meal of meals_seaFood">
+          <td>{{ meal.strMeal }}</td>
+          <td><img [src]="meal.strMealThumb" alt="{{ meal.strMeal }}"></td>
+          <td *ngIf="meal.strInstructions">{{ meal.strInstructions }}</td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr scope="col-3">Meats</tr>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Image</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let meal of meals_meats">
+          <td>{{ meal.strMeal }}</td>
+          <td><img [src]="meal.strMealThumb" alt="{{ meal.strMeal }}"></td>
+          <td *ngIf="meal.strInstructions">{{ meal.strInstructions }}</td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr scope="col-3">Postres</tr>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Image</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let meal of meals_dessert">
+          <td>{{ meal.strMeal }}</td>
+          <td><img [src]="meal.strMealThumb" alt="{{ meal.strMeal }}"></td>
+          <td *ngIf="meal.strInstructions">{{ meal.strInstructions }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
