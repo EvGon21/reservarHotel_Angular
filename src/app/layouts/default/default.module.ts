@@ -28,6 +28,7 @@ import { MeetOurTeamComponent } from 'src/app/modules/about/meet-our-team/meet-o
 import { ContactComponent } from 'src/app/modules/about/contact/contact.component';
 import { FormBookComponent } from 'src/app/modules/book/form-book/form-book.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MapComponent } from 'src/app/modules/book/map/map.component';
 
 @NgModule({
     declarations: [
@@ -53,6 +54,7 @@ import { HttpClientModule } from '@angular/common/http';
         MeetOurTeamComponent,
         ContactComponent,
         FormBookComponent,
+        MapComponent
     ],
     imports: [
         CommonModule,
