@@ -28,6 +28,7 @@ import { MeetOurTeamComponent } from 'src/app/modules/about/meet-our-team/meet-o
 import { ContactComponent } from 'src/app/modules/about/contact/contact.component';
 import { FormBookComponent } from 'src/app/modules/book/form-book/form-book.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MapComponent } from 'src/app/modules/book/map/map.component';
 import { ImgExploreComponent } from 'src/app/modules/explore/img-explore/img-explore.component';
 
 
@@ -55,7 +56,8 @@ import { ImgExploreComponent } from 'src/app/modules/explore/img-explore/img-exp
         MeetOurTeamComponent,
         ContactComponent,
         FormBookComponent,
-        ImgExploreComponent,
+        MapComponent,
+        ImgExploreComponent
     ],
     imports: [
         CommonModule,
