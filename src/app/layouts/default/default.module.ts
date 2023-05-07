@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { LoginComponent } from 'src/app/modules/login/login.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { CheckInOutComponent } from 'src/app/modules/check-in-out/check-in-out.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SectionExperienceComponent } from 'src/app/modules/home/section-experience/section-experience.component';
@@ -27,7 +27,9 @@ import { MissionComponent } from 'src/app/modules/about/mission/mission.componen
 import { MeetOurTeamComponent } from 'src/app/modules/about/meet-our-team/meet-our-team.component';
 import { ContactComponent } from 'src/app/modules/about/contact/contact.component';
 import { FormBookComponent } from 'src/app/modules/book/form-book/form-book.component';
+import { HttpClientModule } from '@angular/common/http';
 import { ImgExploreComponent } from 'src/app/modules/explore/img-explore/img-explore.component';
+
 
 @NgModule({
     declarations: [
@@ -63,6 +65,7 @@ import { ImgExploreComponent } from 'src/app/modules/explore/img-explore/img-exp
         FontAwesomeModule,
         FormsModule,
         ReactiveFormsModule,
+        HttpClientModule
     ]
 })
 export class DefaultModule { }
