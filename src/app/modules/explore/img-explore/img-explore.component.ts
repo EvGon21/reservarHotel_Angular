@@ -41,4 +41,8 @@ export class ImgExploreComponent {
     }
     return array;
   }
+
+  onImageLoad(event: Event) {
+    (event.target as HTMLImageElement).classList.add('loaded');
+  }
 }
