@@ -10,6 +10,7 @@ export class MenuSearchComponent implements OnInit{
   meals_seaFood: any[] = [];
   meals_meats: any[] = [];
   meals_dessert: any[] = [];
+  meals_soups: any[] = [];
 
   constructor(private mealService: MealService) {}
 
@@ -25,6 +26,10 @@ export class MenuSearchComponent implements OnInit{
     this.mealService.getMealsByCategory('Dessert')
     .subscribe(data => {
       this.meals_dessert = data.meals?.slice(0, 5);
+    });
+    this.mealService.getMealsByCategory('Beef')
+    .subscribe(data => {
+      this.meals_soups = data.meals?.slice(6, 11);
     });
     
   }
