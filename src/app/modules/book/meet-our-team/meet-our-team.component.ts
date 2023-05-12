@@ -18,12 +18,12 @@ export class MeetOurTeamComponent {
 
     {name : "Salvador Gaytan", 
     charge: "Back-Dev", 
-    cardText: "Luis is a skilled Back-End Developer with a passion for building robust and scalable applications.", 
+    cardText: "Salvador is a skilled Back-End Developer with a passion for building efficient and reliable systems.", 
     url: "../../../../assets/imgs/team/user.png"},
 
     {name : "Luis Navarrete", 
-    charge: "Back-Dev", 
-    cardText: "Salvador is a skilled Back-End Developer with a passion for building efficient and reliable systems.", 
+    charge: "Back-Dev",
+    cardText: "Luis is a skilled Back-End Developer with a passion for building robust and scalable applications.", 
     url: "../../../../assets/imgs/team/user.png"},
 
     {name : "Michelle Ruvalcaba", 

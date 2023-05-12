@@ -1,0 +1,47 @@
+<div class="container-home">
+  <div class="title-home">
+    <!--<h1>Give us your info</h1>-->
+  </div>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="container form-cont">
+    <div class="row">
+      <mat-form-field class="example-full-width">
+        <mat-label>Full Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <div >
+        <mat-form-field appearance="fill">
+          <mat-label>Check-In</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      
+      <div style= "margin-right: 10px;">
+        <mat-form-field appearance="fill">
+          <mat-label>Check-Out</mat-label>
+          <input matInput [matDatepicker]="picker2">
+          <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <mat-label>Number of Visitors</mat-label>
+        <mat-select [(ngModel)]="numGuests" name="guests">
+          <mat-option *ngFor="let numero of numAdults" [value]="numero">
+            {{numero}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <div class=" btn-sub">
+        <button mat-button color="primary">Send</button>
+      </div>
+    </div>
+  </form>
+</div>

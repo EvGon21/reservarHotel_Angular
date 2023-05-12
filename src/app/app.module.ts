@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DefaultModule } from './layouts/default/default.module';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { DefaultModule } from './layouts/default/default.module';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    DefaultModule
+    DefaultModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
