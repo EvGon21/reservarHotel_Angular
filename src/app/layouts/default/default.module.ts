@@ -25,11 +25,19 @@ import { MenuSearchComponent } from 'src/app/modules/restaurant/menu-search/menu
 import { DomseguroPipe } from 'src/app/modules/explore/video-explore/domseguro.pipe';
 import { MissionComponent } from 'src/app/modules/about/mission/mission.component';
 import { MeetOurTeamComponent } from 'src/app/modules/book/meet-our-team/meet-our-team.component';
-import { ContactComponent } from 'src/app/modules/about/contact/contact.component';
+import { ContactComponent } from 'src/app/modules/login/contact/contact.component';
 import { FormBookComponent } from 'src/app/modules/book/form-book/form-book.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MapComponent } from 'src/app/modules/about/map/map.component';
 import { ImgExploreComponent } from 'src/app/modules/explore/img-explore/img-explore.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+
+//import {MatDateFnsModule} from '@angular/material-date-fns-adapter';
 
 
 @NgModule({
@@ -57,7 +65,7 @@ import { ImgExploreComponent } from 'src/app/modules/explore/img-explore/img-exp
         ContactComponent,
         FormBookComponent,
         MapComponent,
-        ImgExploreComponent
+        ImgExploreComponent,
     ],
     imports: [
         CommonModule,
@@ -67,7 +75,13 @@ import { ImgExploreComponent } from 'src/app/modules/explore/img-explore/img-exp
         FontAwesomeModule,
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        MatSlideToggleModule,
+        MatNativeDateModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule
     ]
 })
 export class DefaultModule { }
