@@ -8,7 +8,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { LoginComponent } from 'src/app/modules/login/login.component';
 import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import { CheckInOutComponent } from 'src/app/modules/login/check-in-out/check-in-out.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SectionExperienceComponent } from 'src/app/modules/home/section-experience/section-experience.component';
 import { SectionHomeComponent } from 'src/app/modules/home/section-home/section-home.component';
@@ -36,7 +35,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-
+import { TableReservedComponent } from 'src/app/modules/reservations/table-reserved/table-reserved.component';
+import { MatTableModule } from '@angular/material/table';
+import { ReservationsComponent } from 'src/app/modules/reservations/reservations.component';
 //import {MatDateFnsModule} from '@angular/material-date-fns-adapter';
 
 
@@ -46,7 +47,6 @@ import {MatSelectModule} from '@angular/material/select';
         HomeComponent,
         AboutComponent,
         LoginComponent,
-        CheckInOutComponent,
         SectionExperienceComponent,
         SectionHomeComponent,
         SectionSatisfyComponent,
@@ -66,6 +66,8 @@ import {MatSelectModule} from '@angular/material/select';
         FormBookComponent,
         MapComponent,
         ImgExploreComponent,
+        ReservationsComponent,
+        TableReservedComponent
     ],
     imports: [
         CommonModule,
@@ -81,7 +83,8 @@ import {MatSelectModule} from '@angular/material/select';
         MatDatepickerModule,
         MatFormFieldModule,
         MatInputModule,
-        MatSelectModule
+        MatSelectModule,
+        MatTableModule
     ]
 })
 export class DefaultModule { }
