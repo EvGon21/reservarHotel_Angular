@@ -42,13 +42,6 @@ export class ContactComponent implements OnInit {
     this.satisfaction = satisfaction;
   }
 
-  sendForm() : void{
-    this.name = ' ';
-    this.numGuests = '';
-    this.checkInDate = new Date('');
-    this.checkOutDate = new Date('');
-  }
-
   onSubmit() {
 
     this.send = 0;
@@ -133,6 +126,17 @@ export class ContactComponent implements OnInit {
           title: 'Your reservation has been made...',
         })
         this.send = 1;
+        this.name = ' ';
+        this.numGuests = '';
+        this.checkInDate = new Date('');
+        this.checkOutDate = new Date('');
+        break;
+      case 1:
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Reservations must be done after current date!',
+        })
         break;
       case 2:
         Swal.fire({
@@ -162,11 +166,7 @@ export class ContactComponent implements OnInit {
           text: 'Date occupied:' + this.reservationIn + 'a' + this.reservationOut,
         })
         break;
-
     }
-
-
-
   }
 
   /* contactForm: FormGroup = new FormGroup({});
