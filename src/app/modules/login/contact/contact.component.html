@@ -1,4 +1,12 @@
 <div class="container-home">
+  <form (submit)="enviarNombre()">
+    <label>
+      Ingresa tu nombre:
+      <input type="text" [(ngModel)]="nombre" name="nombre">
+    </label>
+    <button type="submit">Enviar</button>
+  </form>
+  
   <form (ngSubmit)="onSubmit()" class="container form-cont">
     <div class="row">
       <mat-form-field class="example-full-width">

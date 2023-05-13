@@ -9,6 +9,7 @@ import { ExploreComponent } from './modules/explore/explore.component';
 import { RestaurantComponent } from './modules/restaurant/restaurant.component';
 import { BookComponent } from './modules/book/book.component';
 import { ReservationsComponent } from './modules/reservations/reservations.component';
+import { TableReservedComponent } from './modules/reservations/table-reserved/table-reserved.component';
 const routes: Routes = [
   {path: '',
   component: DefaultComponent,
@@ -37,7 +38,7 @@ const routes: Routes = [
     component: BookComponent
   }
   ,{
-    path: 'reservations',
+    path: 'reservations/:nombre',
     component: ReservationsComponent
   }]
 }];
