@@ -5,7 +5,12 @@
     </div>
 </div>
 <div class="container2">
+  <ng-container *ngIf="nombreEncontrado; else noEncontrado">
   <app-table-reserved></app-table-reserved>
-    
+</ng-container>
+<ng-template #noEncontrado>
+  <button mat-button color="primary" routerLink="/login">Regresar</button>
+</ng-template>
+    <p style="color: white;">{{nombre}}</p>
 </div>
 

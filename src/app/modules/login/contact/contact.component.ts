@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 
@@ -30,11 +31,15 @@ export class ContactComponent implements OnInit {
   numAdults: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
   band: number = 0;
   send: number = 0;
-  constructor() {
+  nombre: string="";
+  constructor(private router: Router) {
     this.checkInDate = new Date('');
     this.checkOutDate = new Date('');
   }
-
+  enviarNombre() {
+    console.log(this.nombre);
+    this.router.navigate(['reservations', this.nombre]);
+  }
   ngOnInit(): void {
   }
 
