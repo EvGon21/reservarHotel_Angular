@@ -19,12 +19,14 @@ export class ContactComponent implements OnInit {
   checkOutTime: string = "11:00";
   reservationIn: string = "";
   reservationOut: string = "";
+
   array1: any[] = [];
   array2: any[] = [];
   array3: any[] = [];
   array4: any[] = [];
   array5: any[] = [];
   array6: any[] = [];
+
   numAdults: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
   band: number = 0;
   send: number = 0;
@@ -40,6 +42,12 @@ export class ContactComponent implements OnInit {
     this.satisfaction = satisfaction;
   }
 
+  sendForm() : void{
+    this.name = ' ';
+    this.numGuests = '';
+    this.checkInDate = new Date('');
+    this.checkOutDate = new Date('');
+  }
 
   onSubmit() {
 
@@ -125,10 +133,6 @@ export class ContactComponent implements OnInit {
           title: 'Your reservation has been made...',
         })
         this.send = 1;
-        this.name = ' ';
-        this.numGuests = '';
-        this.checkInDate = new Date('');
-        this.checkOutDate = new Date('');
         break;
       case 2:
         Swal.fire({
