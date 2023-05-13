@@ -2,27 +2,28 @@
   <div class="title-home">
     <!--<h1>Give us your info</h1>-->
   </div>
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="container form-cont">
+  <form  (ngSubmit)="onSubmit()" class="container form-cont">
     <div class="row">
       <mat-form-field class="example-full-width">
         <mat-label>Full Name</mat-label>
-        <input matInput>
+        <input matInput id="name" name="name" [(ngModel)]="name">
       </mat-form-field>
+     <!-- <p>Nombre: {{name}}</p>-->
     </div>
     <div class="row">
       <div >
         <mat-form-field appearance="fill">
           <mat-label>Check-In</mat-label>
-          <input matInput [matDatepicker]="picker">
+          <input matInput [matDatepicker]="picker" id="checkIn" name="checkIn" [(ngModel)]="checkInDate">
           <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
       </div>
-      
+      <h1 style="color: white;">HOLA</h1>
       <div style= "margin-right: 10px;">
         <mat-form-field appearance="fill">
           <mat-label>Check-Out</mat-label>
-          <input matInput [matDatepicker]="picker2">
+          <input matInput [matDatepicker]="picker2" id="checkOut" name="checkOut" [(ngModel)]="checkOutDate">
           <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
           <mat-datepicker #picker2></mat-datepicker>
         </mat-form-field>
@@ -31,7 +32,7 @@
     <div class="row">
       <mat-form-field appearance="fill">
         <mat-label>Number of Visitors</mat-label>
-        <mat-select [(ngModel)]="numGuests" name="guests">
+        <mat-select id="guests" name="guests" [(ngModel)]="numGuests">
           <mat-option *ngFor="let numero of numAdults" [value]="numero">
             {{numero}}
           </mat-option>
@@ -40,7 +41,7 @@
     </div>
     <div class="row">
       <div class=" btn-sub">
-        <button mat-button color="primary">Send</button>
+        <button mat-button color="primary"  type="submit">Send</button>
       </div>
     </div>
   </form>
