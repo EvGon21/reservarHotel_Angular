@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -35,7 +36,6 @@ export class ContactComponent implements OnInit{
   }
  
   ngOnInit(): void {
-   
   }
 
   onSubmit() {
@@ -114,13 +114,46 @@ export class ContactComponent implements OnInit{
       localStorage.setItem('checkOutTime', JSON.stringify(this.array4));
       localStorage.setItem('name', JSON.stringify(this.array5));
       localStorage.setItem('numGuests', JSON.stringify(this.array6)); 
-      alert(`Check-in date: ${checkInDateString}\nCheck-out date: ${checkOutDateString}`);
+      Swal.fire({
+        icon: 'success',
+        title: 'Your reservation has been made...',
+      }) 
       break;
-      case 1:  alert("Las fechas deben ser posteriores a la fecha actual"); break;
-      case 2:  alert("Esa combiancion de fechas no es posible"); break;
-      case 3:  alert("Fecha de entrada ocupada"); break;
-      case 4:  alert("Fecha de salida ocupada");break;
-      case 5:   alert("Hay una reservacion en tu rango de fechas es esta: " +this.reservationIn+ " a "+this.reservationOut ); break;
+      case 1:
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Reservations must be done after current date!',
+        }) 
+      break;
+      case 2:
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'You can not make a reservation in these dates!',
+        })
+        break;
+      case 3:
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Check-In date occupied!',
+        })
+        break;
+      case 4:
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Check-Out date occupied!',
+        })
+        break;
+      case 5:
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Date occupied:' +this.reservationIn+'a'+this.reservationOut,
+        })
+        break;
 
     }
    
