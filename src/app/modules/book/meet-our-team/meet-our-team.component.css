@@ -29,13 +29,19 @@
     height: 100%;
     width: 100%;
     min-height: 350px;
-    min-width: 300px;
+    min-width: 350px;
+    border-radius: 50%; /* Hace que la imagen tenga forma circular */
+    object-fit: cover; /* Ajusta la imagen al contenedor */
+    display: block; /* Elimina el espacio debajo de la imagen */
 }
 
 .img-container {
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 350px; /* Establece una altura fija para el contenedor */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga del contenedor */
 }
 
 .social-icons {

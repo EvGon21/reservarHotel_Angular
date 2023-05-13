@@ -47,3 +47,28 @@
     margin: 0 auto;
     background-color: #081820;
 }
+
+.btn-sub{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-sub button {
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    height: 50px;
+    border-radius: 2rem;
+    background-color: #C7E7F1;
+    color: black;
+    transition: background-color 0.3s ease, border 0.3s ease, transform 0.3s ease;
+}
+  
+.btn-sub button:hover {
+    background-color: #081820;
+    color: white;
+    border: 2px solid white;
+    transform: scale(1.1);
+}
+  
