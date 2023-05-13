@@ -46,3 +46,20 @@
     </div>
   </form>
 </div>
+
+<div class="survey-container">
+  <div *ngIf="send == 1 && satisfaction.rating == 0"> 
+  <h1 class="survey-title">Satisfaction Survey</h1>
+  <app-satisfaction-form (submitForm)="onSatisfactionSubmit($event)"  ></app-satisfaction-form>
+  <br>
+</div>
+<div *ngIf="satisfaction.rating > 0">
+  <div class="s-cont">
+  <p id="p2">Submitted answers:</p>
+  <div *ngIf="satisfaction">
+    <p>Rating: {{satisfaction.rating}}</p>
+    <p>Comment: {{satisfaction.comment}}</p>
+  </div>
+ </div>
+</div>
+</div><br>

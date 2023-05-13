@@ -38,6 +38,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { TableReservedComponent } from 'src/app/modules/reservations/table-reserved/table-reserved.component';
 import { MatTableModule } from '@angular/material/table';
 import { ReservationsComponent } from 'src/app/modules/reservations/reservations.component';
+import { SatisfactionFormComponent } from 'src/app/modules/login/satisfaction-form/satisfaction-form.component';
 //import {MatDateFnsModule} from '@angular/material-date-fns-adapter';
 
 
@@ -67,6 +68,7 @@ import { ReservationsComponent } from 'src/app/modules/reservations/reservations
         MapComponent,
         ImgExploreComponent,
         ReservationsComponent,
+        SatisfactionFormComponent,
         TableReservedComponent
     ],
     imports: [

@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 
 export class ContactComponent implements OnInit{
+  satisfaction: { rating: number, comment: string } = { rating: 0, comment: '' };
   checkInDate: Date;
   checkOutDate: Date;
   numGuests: string = "";
@@ -25,7 +26,7 @@ export class ContactComponent implements OnInit{
   array6: any[] = [];
   numAdults: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
   band: number = 0;
-  
+  send: number = 0;
   constructor() { 
     this.checkInDate = new Date('');
     this.checkOutDate = new Date('');
@@ -37,9 +38,16 @@ export class ContactComponent implements OnInit{
   ngOnInit(): void {
    
   }
+  onSatisfactionSubmit(satisfaction: { rating: number, comment: string }) {
+    this.satisfaction = satisfaction;
+  }
+  
 
   onSubmit() {
 
+    this.send=0;
+    this.satisfaction.rating = 0;
+    this.satisfaction.comment = '';
     
     const date = new Date();
     const year = date.getFullYear();
@@ -115,6 +123,12 @@ export class ContactComponent implements OnInit{
       localStorage.setItem('name', JSON.stringify(this.array5));
       localStorage.setItem('numGuests', JSON.stringify(this.array6)); 
       alert(`Check-in date: ${checkInDateString}\nCheck-out date: ${checkOutDateString}`);
+
+      this.send=1;
+      this.name = ' ';
+      this.numGuests='';
+      this.checkInDate = new Date('');
+    this.checkOutDate = new Date('');
       break;
       case 1:  alert("Las fechas deben ser posteriores a la fecha actual"); break;
       case 2:  alert("Esa combiancion de fechas no es posible"); break;

@@ -7,10 +7,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DefaultModule } from './layouts/default/default.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-
 @NgModule({
   declarations: [
     AppComponent,
+    
     
     
     
