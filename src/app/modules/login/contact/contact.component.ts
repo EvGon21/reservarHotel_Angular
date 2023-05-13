@@ -9,7 +9,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./contact.component.css']
 })
 
-export class ContactComponent implements OnInit{
+export class ContactComponent implements OnInit {
+  satisfaction: { rating: number, comment: string } = { rating: 0, comment: '' };
   checkInDate: Date;
   checkOutDate: Date;
   numGuests: string = "";
@@ -26,34 +27,39 @@ export class ContactComponent implements OnInit{
   array6: any[] = [];
   numAdults: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
   band: number = 0;
-  
-  constructor() { 
+  send: number = 0;
+  constructor() {
     this.checkInDate = new Date('');
     this.checkOutDate = new Date('');
-
-
-   
   }
- 
+
   ngOnInit(): void {
   }
 
+  onSatisfactionSubmit(satisfaction: { rating: number, comment: string }) {
+    this.satisfaction = satisfaction;
+  }
+
+
   onSubmit() {
 
-    
+    this.send = 0;
+    this.satisfaction.rating = 0;
+    this.satisfaction.comment = '';
+
     const date = new Date();
     const year = date.getFullYear();
     const month = ("0" + (date.getMonth() + 1)).slice(-2);
     const day = ("0" + date.getDate()).slice(-2);
     const formattedDate = `${year}-${month}-${day}`;
 
-    let checkInD= new Date(this.checkInDate);
+    let checkInD = new Date(this.checkInDate);
     let Year = checkInD.getFullYear();
     let Month = String(checkInD.getMonth() + 1).padStart(2, "0");
     let Day = String(checkInD.getDate()).padStart(2, "0");
     let checkInDateString = `${Year}-${Month}-${Day}`;
 
-    let checkOutD= new Date(this.checkOutDate);
+    let checkOutD = new Date(this.checkOutDate);
     let YeaR = checkOutD.getFullYear();
     let MontH = String(checkOutD.getMonth() + 1).padStart(2, "0");
     let DaY = String(checkOutD.getDate()).padStart(2, "0");
@@ -62,8 +68,8 @@ export class ContactComponent implements OnInit{
     const checkOutDateString = this.checkOutDate.toLocaleString();*/
 
 
-    this.band=0;
-  
+    this.band = 0;
+
     const array1Str = localStorage.getItem('checkIn');
     if (array1Str) {
       this.array1 = JSON.parse(array1Str);
@@ -74,58 +80,56 @@ export class ContactComponent implements OnInit{
     if (array2Str) {
       this.array2 = JSON.parse(array2Str);
     }
-     
+
     if (checkInDateString < formattedDate || checkOutDateString < formattedDate) {
-      
-      this.band =1;
-    }else if(checkInDateString >= checkOutDateString){
-      this.band =2;
-    }else{
+
+      this.band = 1;
+    } else if (checkInDateString >= checkOutDateString) {
+      this.band = 2;
+    } else {
       for (let i = 0; i <= this.array1.length; i++) {
-        if(checkInDateString >= this.array1[i] && checkInDateString < this.array2[i]){
-          this.band=3;
+        if (checkInDateString >= this.array1[i] && checkInDateString < this.array2[i]) {
+          this.band = 3;
           break;
-        }else if(checkOutDateString > this.array1[i] && checkOutDateString <= this.array2[i]){
-          this.band=4;
+        } else if (checkOutDateString > this.array1[i] && checkOutDateString <= this.array2[i]) {
+          this.band = 4;
           break;
-        }else if(checkInDateString < this.array1[i] && checkOutDateString > this.array2[i] ){
+        } else if (checkInDateString < this.array1[i] && checkOutDateString > this.array2[i]) {
           this.reservationIn = this.array1[i];
           this.reservationOut = this.array2[i];
-          this.band=5;
+          this.band = 5;
           break;
         }
-        
+
       }
     }
 
-  
-    switch(this.band){
-      case 0:  
-      this.array1.push(checkInDateString);
-      this.array2.push(checkOutDateString);
-      this.array3.push(this.checkInTime);
-      this.array4.push(this.checkOutTime);
-      this.array5.push(this.name);
-      this.array6.push(this.numGuests);
-  
-      localStorage.setItem('checkIn', JSON.stringify(this.array1));
-      localStorage.setItem('checkOut', JSON.stringify(this.array2));
-      localStorage.setItem('checkInTime', JSON.stringify(this.array3));
-      localStorage.setItem('checkOutTime', JSON.stringify(this.array4));
-      localStorage.setItem('name', JSON.stringify(this.array5));
-      localStorage.setItem('numGuests', JSON.stringify(this.array6)); 
-      Swal.fire({
-        icon: 'success',
-        title: 'Your reservation has been made...',
-      }) 
-      break;
-      case 1:
+
+    switch (this.band) {
+      case 0:
+        this.array1.push(checkInDateString);
+        this.array2.push(checkOutDateString);
+        this.array3.push(this.checkInTime);
+        this.array4.push(this.checkOutTime);
+        this.array5.push(this.name);
+        this.array6.push(this.numGuests);
+
+        localStorage.setItem('checkIn', JSON.stringify(this.array1));
+        localStorage.setItem('checkOut', JSON.stringify(this.array2));
+        localStorage.setItem('checkInTime', JSON.stringify(this.array3));
+        localStorage.setItem('checkOutTime', JSON.stringify(this.array4));
+        localStorage.setItem('name', JSON.stringify(this.array5));
+        localStorage.setItem('numGuests', JSON.stringify(this.array6));
         Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Reservations must be done after current date!',
-        }) 
-      break;
+          icon: 'success',
+          title: 'Your reservation has been made...',
+        })
+        this.send = 1;
+        this.name = ' ';
+        this.numGuests = '';
+        this.checkInDate = new Date('');
+        this.checkOutDate = new Date('');
+        break;
       case 2:
         Swal.fire({
           icon: 'error',
@@ -151,38 +155,38 @@ export class ContactComponent implements OnInit{
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: 'Date occupied:' +this.reservationIn+'a'+this.reservationOut,
+          text: 'Date occupied:' + this.reservationIn + 'a' + this.reservationOut,
         })
         break;
 
     }
-   
 
-  
-}
- 
- /* contactForm: FormGroup = new FormGroup({});
 
-  constructor(private formBuilder: FormBuilder) { }
 
-  numGuests: string = "";
-  numAdults: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
-
-  ngOnInit(): void {
-    this.contactForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      phone: ['', Validators.required],
-      message: ['', Validators.required]
-    });
   }
-  
-  onSubmit() {
-    if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
-      // Enviar el formulario a través de una petición HTTP
-    } else {
-      console.log("Formulario inválido");
-    }
-  }*/
+
+  /* contactForm: FormGroup = new FormGroup({});
+ 
+   constructor(private formBuilder: FormBuilder) { }
+ 
+   numGuests: string = "";
+   numAdults: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+ 
+   ngOnInit(): void {
+     this.contactForm = this.formBuilder.group({
+       name: ['', Validators.required],
+       email: ['', [Validators.required, Validators.email]],
+       phone: ['', Validators.required],
+       message: ['', Validators.required]
+     });
+   }
+   
+   onSubmit() {
+     if (this.contactForm.valid) {
+       console.log(this.contactForm.value);
+       // Enviar el formulario a través de una petición HTTP
+     } else {
+       console.log("Formulario inválido");
+     }
+   }*/
 }
