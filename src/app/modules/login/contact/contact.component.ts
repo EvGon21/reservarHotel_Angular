@@ -16,8 +16,8 @@ export class ContactComponent implements OnInit {
   checkOutDate: Date;
   numGuests: string = "";
   name: string = "";
-  checkInTime: string = "16:00";
-  checkOutTime: string = "11:00";
+  checkInTime: string;
+  checkOutTime: string ;
   reservationIn: string = "";
   reservationOut: string = "";
 
@@ -35,6 +35,10 @@ export class ContactComponent implements OnInit {
   constructor(private router: Router) {
     this.checkInDate = new Date('');
     this.checkOutDate = new Date('');
+    this.name = "";
+    this.numGuests = "";
+    this.checkInTime = "16:00";
+    this.checkOutTime = "11:00";
   }
   enviarNombre() {
     console.log(this.nombre);
