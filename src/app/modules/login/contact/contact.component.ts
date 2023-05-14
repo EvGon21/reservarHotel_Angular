@@ -14,8 +14,8 @@ export class ContactComponent implements OnInit {
   satisfaction: { rating: number, comment: string } = { rating: 0, comment: '' };
   checkInDate: Date;
   checkOutDate: Date;
-  numGuests: string = "";
-  name: string = "";
+  numGuests: string ;
+  name: string;
   checkInTime: string;
   checkOutTime: string ;
   reservationIn: string = "";
@@ -89,6 +89,24 @@ export class ContactComponent implements OnInit {
     const array2Str = localStorage.getItem('checkOut');
     if (array2Str) {
       this.array2 = JSON.parse(array2Str);
+    }
+    const array3Str = localStorage.getItem('checkInTime');
+    if (array3Str) {
+      this.array3 = JSON.parse(array3Str);
+      //console.log(this.array1[0]);
+      //console.log(this.array1[2]);
+    }
+    const array4Str = localStorage.getItem('checkOutTime');
+    if (array4Str) {
+      this.array4 = JSON.parse(array4Str);
+    }
+    const array5Str = localStorage.getItem('name');
+    if (array5Str) {
+      this.array5 = JSON.parse(array5Str);
+    }
+    const array6Str = localStorage.getItem('numGuests');
+    if (array6Str) {
+      this.array6 = JSON.parse(array6Str);
     }
 
     if (checkInDateString < formattedDate || checkOutDateString < formattedDate) {
