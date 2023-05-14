@@ -23,7 +23,6 @@
 .container-main {
     display: flex;
     flex-direction: column;
-    height: 700px;
     min-height: 100%;
     min-width: 100%;
     background-image: url(../../../assets/imgs/fake/fake-4.jpg);
