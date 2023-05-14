@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-satisfaction-form',
@@ -9,7 +9,8 @@ export class SatisfactionFormComponent {
   rating: number = 0;
   comment: string = '';
   @Output() submitForm = new EventEmitter<{ rating: number, comment: string }>();
-
+  @Input() placeholder: string = 'Enter your comment';
+  
   onSubmit() {
     this.submitForm.emit({ rating: this.rating, comment: this.comment });
     this.rating = 0;

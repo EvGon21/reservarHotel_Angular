@@ -17,7 +17,6 @@
           <input matInput id="name" name="name" [(ngModel)]="name">
         </mat-form-field>
         <!-- <p>Nombre: {{name}}</p>-->
-  
         <div>
           <div>
             <mat-form-field appearance="fill">
@@ -56,7 +55,7 @@
     <div class="survey-container">
       <div *ngIf="send == 1 && satisfaction.rating == 0">
         <h1 class="survey-title">Satisfaction Survey</h1>
-        <app-satisfaction-form (submitForm)="onSatisfactionSubmit($event)"></app-satisfaction-form>
+        <app-satisfaction-form (submitForm)="onSatisfactionSubmit($event)" [placeholder]="'Type your comment here'"></app-satisfaction-form>
         <br>
       </div>
       <div *ngIf="send === 0">
